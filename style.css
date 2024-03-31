@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --max-padding: 64px;
+    --default-padding: 48px;
+    --min-padding: 16px;
+
+    --p-default-size: 16px;
+    --p-default-weight: 400;
+    --p-bold-weight: 700;
+    --p-default-color: #34355B;
+    --p-font-family: "DM Sans", sans-serif;
+
+    --heading-default-size: 24px;
+    --heading-default-weight: 600;
+    --heading-regular-weight: 400;
+    --heading-default-color: #34355B;
+    --heading-font-family: "Montserrat", sans-serif;
+
+    --default-border-radius: 6px;
+
+    --base-color-white: #fff;
+    --base-color-black: #000;
+    --base-color-purple: #7879F1;
+    --base-color-gray: #DCE2E9;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(287.56deg, #C2E9FB 0%, #A1C4FD 100%);
+
+    display: grid;
+    place-items: center;
+}
+
+.screen {
+    width: fit-content;
+    /* margin: 0 auto; */
+    padding: var(--default-padding) var(--max-padding) var(--max-padding) var(--max-padding);
+    
+    background-color: var(--base-color-white);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: var(--default-border-radius);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--default-padding);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--min-padding);
+}
+
+header h1 {
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-default-size);
+    font-weight: var(--heading-default-weight);
+    color: var(--heading-default-color);
+}
+
+header p {
+    font-family: var(--p-font-family);
+    font-size: var(--p-default-size);
+    font-weight: var(--p-default-weight);
+    color: var(--p-default-color);
+    opacity: 0.8;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+input, button {
+    border: none;
+    padding: var(--min-padding);
+
+    font-family: var(--p-font-family);
+    font-size: var(--p-default-size);
+}
+
+input {
+    width: 50px;
+
+    background-color: var(--base-color-gray);
+    border-radius: var(--default-border-radius) 0 0 var(--default-border-radius);
+    color: var(--p-default-color);
+
+    font-weight: var(--p-default-weight);
+
+    text-align: center;
+}
+
+button {
+    background-color: var(--base-color-purple);
+    border-radius: 0 var(--default-border-radius) var(--default-border-radius) 0;
+    color: var(--base-color-white);
+
+    font-weight: var(--p-bold-weight);
+
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.replay-screen header p {
+    font-size: var(--heading-default-size);
+    opacity: 1;
+}
+
+.replay-screen main button {
+    border-radius: var(--default-border-radius)
+}
